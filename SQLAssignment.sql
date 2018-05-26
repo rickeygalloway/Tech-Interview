@@ -2,7 +2,8 @@
 --In a production environment with much more data, more analysis may be needed to ensure optimum performance.
 
 --I did have some questions along to way, and I was told to call if I had questions.  This work was done late at
---night, so instead of stopping, I continued with "My understanding of this" for each section.
+--night and over a holiday weekend, so instead of stopping and waiting for a few days for feedback, I continued 
+--with "My understanding of this" for each section.
 
 WITH
 
