@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Pulse8TestDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Pulse8TestDB.dbo.MemberDiagnosisAndCategory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="MemberDiagnosisAndCategory">
+          <Key>
+            <PropertyRef Name="Member ID" />
+            <PropertyRef Name="First Name" />
+            <PropertyRef Name="Last Name" />
+            <PropertyRef Name="Is Most Severe Category" />
+          </Key>
+          <Property Name="Member ID" Type="int" Nullable="false" />
+          <Property Name="First Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Last Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Most Severe Diagnosis ID" Type="int" />
+          <Property Name="Most Severe Diagnosis Description" Type="nvarchar" MaxLength="100" />
+          <Property Name="Category ID" Type="int" />
+          <Property Name="Category Description" Type="nvarchar" MaxLength="100" />
+          <Property Name="Category Score" Type="int" />
+          <Property Name="Is Most Severe Category" Type="varchar" MaxLength="1" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Pulse8TestDBModelStoreContainer">
+          <EntitySet Name="MemberDiagnosisAndCategory" EntityType="Self.MemberDiagnosisAndCategory" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [MemberDiagnosisAndCategory].[Member ID] AS [Member ID], 
+    [MemberDiagnosisAndCategory].[First Name] AS [First Name], 
+    [MemberDiagnosisAndCategory].[Last Name] AS [Last Name], 
+    [MemberDiagnosisAndCategory].[Most Severe Diagnosis ID] AS [Most Severe Diagnosis ID], 
+    [MemberDiagnosisAndCategory].[Most Severe Diagnosis Description] AS [Most Severe Diagnosis Description], 
+    [MemberDiagnosisAndCategory].[Category ID] AS [Category ID], 
+    [MemberDiagnosisAndCategory].[Category Description] AS [Category Description], 
+    [MemberDiagnosisAndCategory].[Category Score] AS [Category Score], 
+    [MemberDiagnosisAndCategory].[Is Most Severe Category] AS [Is Most Severe Category]
+    FROM [dbo].[MemberDiagnosisAndCategory] AS [MemberDiagnosisAndCategory]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Pulse8TestDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="MemberDiagnosisAndCategory">
+          <Key>
+            <PropertyRef Name="Member_ID" />
+            <PropertyRef Name="First_Name" />
+            <PropertyRef Name="Last_Name" />
+            <PropertyRef Name="Is_Most_Severe_Category" />
+          </Key>
+          <Property Name="Member_ID" Type="Int32" Nullable="false" />
+          <Property Name="First_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Most_Severe_Diagnosis_ID" Type="Int32" />
+          <Property Name="Most_Severe_Diagnosis_Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Category_ID" Type="Int32" />
+          <Property Name="Category_Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Category_Score" Type="Int32" />
+          <Property Name="Is_Most_Severe_Category" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Pulse8TestDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="MemberDiagnosisAndCategories" EntityType="Self.MemberDiagnosisAndCategory" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Pulse8TestDBModelStoreContainer" CdmEntityContainer="Pulse8TestDBEntities">
+          <EntitySetMapping Name="MemberDiagnosisAndCategories">
+            <EntityTypeMapping TypeName="Pulse8TestDBModel.MemberDiagnosisAndCategory">
+              <MappingFragment StoreEntitySet="MemberDiagnosisAndCategory">
+                <ScalarProperty Name="Member_ID" ColumnName="Member ID" />
+                <ScalarProperty Name="First_Name" ColumnName="First Name" />
+                <ScalarProperty Name="Last_Name" ColumnName="Last Name" />
+                <ScalarProperty Name="Most_Severe_Diagnosis_ID" ColumnName="Most Severe Diagnosis ID" />
+                <ScalarProperty Name="Most_Severe_Diagnosis_Description" ColumnName="Most Severe Diagnosis Description" />
+                <ScalarProperty Name="Category_ID" ColumnName="Category ID" />
+                <ScalarProperty Name="Category_Description" ColumnName="Category Description" />
+                <ScalarProperty Name="Category_Score" ColumnName="Category Score" />
+                <ScalarProperty Name="Is_Most_Severe_Category" ColumnName="Is Most Severe Category" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

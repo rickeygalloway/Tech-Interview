@@ -1,0 +1,18 @@
+Instructions:
+3) Write a query to return a list of all members and all of their corresponding categories:
+
+	a. Please include the following fields: Member ID, First Name, Last Name, Most Severe
+	Diagnosis ID, Most Severe Diagnosis Description, Category ID, Category Description,
+	Category Score and Is Most Severe Category.
+	
+	b. Most Severe Diagnosis ID and Description should be the diagnosis with the lowest
+	Diagnosis ID present for each Member’s Category.
+	
+	c. Is Most Severe Category – 0 or 1 should be set to 1 for the lowest Category ID present
+	for each Member. Severity is not based on category score. Please also set this to 1 for
+	Members without corresponding Categories.
+	
+	d. Members without Diagnosis or Categories should be included in the result set.
+	
+4) Extra Credit: Write a C# Console Application that prompts for a Member ID and displays the
+results of query #3 for that Member. 
