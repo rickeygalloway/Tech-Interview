@@ -2,7 +2,7 @@
 
 ## SQL Assignment
     Added several notes on what I was doing, along with my understanding of what the requirements were stating.
-    <a href="https://github.com/rickeygalloway/Tech-Interview/blob/master/SQLAssignment.sql">https://github.com/rickeygalloway/Tech-Interview/blob/master/SQLAssignment.sql</a>
+    [https://screencast-o-matic.com/watch/cFhOeUbJkh](https://github.com/rickeygalloway/Tech-Interview/blob/master/SQLAssignment.sql)
 
 ## Extra Credit - Console App
     C# Console Application is <a href="https://github.com/rickeygalloway/Tech-Interview/tree/master/ConsoleApp">https://github.com/rickeygalloway/Tech-Interview/tree/master/ConsoleApp</a>
