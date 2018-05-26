@@ -16,7 +16,7 @@ Added a code review notes to top of the Program.cs
 Video of working application can be found at 
 [https://screencast-o-matic.com/watch/cFhOeUbJkh](https://screencast-o-matic.com/watch/cFhOeUbJkh)
 
-####Video Notes
+Video Notes
 Initial part of the video is verify that the creation of the View works
 Then I display data for valid member id's
 Then some testing with invalid data
