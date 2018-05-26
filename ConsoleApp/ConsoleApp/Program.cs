@@ -92,7 +92,7 @@ namespace ConsoleApp
 						memberInfo.Category_Score.ToString(),
 						memberInfo.Is_Most_Severe_Category);
 
-				ScreenOutput.WriteLine(output, ConsoleColor.DarkGreen);
+				ScreenOutput.WriteLine(output, ConsoleColor.Cyan);
 			}
 		}
 
