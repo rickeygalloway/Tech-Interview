@@ -27,7 +27,7 @@ namespace ConsoleApp
 	//6.	Very few comments.I try to name variables and methods that explain what is happening.I did comment the Setup class and explained 
 	//		its purpose.
 	//7.	Admittedly, I read glassdoor reviews on interviews - and response.Seems I have the same assignment as others.And I did create a 
-	//		video of my working application.
+	//		video of my working application. https://screencast-o-matic.com/watch/cFhO2xbJdM
 
 	class Program
 	{
